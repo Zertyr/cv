@@ -13,6 +13,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 
+  text-align: justify;
 
 }
 
@@ -20,6 +21,7 @@ body {
   body {
     padding-top: 0;
     padding-left: 17rem;
+
   }
 }
 
@@ -33,6 +35,7 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   color: #343a40;
+  text-align: center;
 }
 
 h1 {
@@ -100,6 +103,7 @@ p.lead {
 }
 
 @media (min-width: 992px) {
+
   #sideNav {
     text-align: center;
     position: fixed;
@@ -166,6 +170,17 @@ section.resume-section .resume-item .resume-date {
 }
 
 @media (min-width: 768px) {
+  body{
+    width: 87%;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+text-align: inherit;
+  }
   section.resume-section {
     min-height: 100vh;
   }
