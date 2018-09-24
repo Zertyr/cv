@@ -56,6 +56,10 @@ p.lead {
   font-weight: 400;
 }
 
+.downloadPdf {
+  text-align: inherit;
+}
+
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
