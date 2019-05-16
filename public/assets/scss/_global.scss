@@ -24,6 +24,13 @@ h6 {
   color: $gray-800;
 }
 
+.downloadPdf {
+  @include heading-font;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $gray-800;
+}
+
 h1 {
   font-size: 6rem;
   line-height: 5.5rem;
