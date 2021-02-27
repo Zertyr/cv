@@ -312,6 +312,10 @@
                 <h4>MangaTemple (Perso)</h4>
                 <a href="http://vps699009.ovh.net/"><img src="assets/img/mangaTemple.png" class="screenFolio img-fluid" alt=""></a>                                                          
               </li>
+              <li class="list-inline-item hvr-float-shadow boxFolio">
+                <h4>Jeux en JS (Perso)</h4>
+                <a data-target="#ModalGame" data-toggle="modal"><img src="assets/img/gamejs.jpg" class="screenFolio img-fluid" alt=""></a>                                                          
+              </li>
               <li></li>
             </ul>
         </div>
@@ -319,6 +323,58 @@
 
     </div>
 
+    <!--start Modal for js game-->
+    <div class="modal" tabindex="-1" role="dialog" id="ModalGame">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Choisissez votre jeux : </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <a data-target="#MorpionGame" data-toggle="modal" data-dismiss="modal"><p class="game">Morpion</p></a>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="MorpionGame">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Jeux en js : </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h2 class="titleGame">Morpion</h2>
+            <section id="morpionGrille">
+              <div data-index="0" class="case"></div>
+              <div data-index="1" class="case"></div>
+              <div data-index="2" class="case"></div>
+              <div data-index="3" class="case"></div>
+              <div data-index="4" class="case"></div>
+              <div data-index="5" class="case"></div>
+              <div data-index="6" class="case"></div>
+              <div data-index="7" class="case"></div>
+              <div data-index="8" class="case"></div>
+            </section>
+          <button type="button" class="btn btn-secondary resetGame">Recommencer</button>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-target="#ModalGame" data-toggle="modal" data-dismiss="modal">Autres jeux</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--enf of modal for js game -->
     <!-- Bootstrap core JavaScript -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -243,3 +243,41 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+/* jsGame */
+.modal {
+  top: 15%;
+}
+p.game {
+  color: #006fdd;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+p.game:hover {
+  color: yellowgreen;
+}
+
+.titleGame {
+  text-align: center;
+}
+
+.resetGame {
+  display: block;
+  margin:auto;
+  margin-top: 20px;
+}
+
+/* Grille morpion */
+
+#morpionGrille {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  margin:auto;
+}
+
+.case {
+  border: #343a40 solid 2px;
+  height: 100px;
+}
