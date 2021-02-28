@@ -246,7 +246,7 @@ a:hover, a:focus, a:active {
 
 /* jsGame */
 .modal {
-  top: 15%;
+  top: 0% !important;
 }
 p.game {
   color: #006fdd;
