@@ -334,7 +334,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <a data-target="#MorpionGame" data-toggle="modal" data-dismiss="modal"><p class="game">Morpion</p></a>
+            <a data-target="#MorpionGame" data-toggle="modal" data-dismiss="modal"><p class="game" id="titleMorpion">Morpion(JcJ)</p></a>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
@@ -347,12 +347,12 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Jeux en js : </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="gameClosed()">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <h2 class="titleGame">Morpion</h2>
+            <h2 class="titleGame">Morpion(JcJ)</h2>
             <section id="morpionGrille">
               <div data-index="0" class="case"></div>
               <div data-index="1" class="case"></div>
@@ -364,12 +364,13 @@
               <div data-index="7" class="case"></div>
               <div data-index="8" class="case"></div>
             </section>
+            <p class="statut"></p>
           <button type="button" class="btn btn-secondary resetGame">Recommencer</button>
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-target="#ModalGame" data-toggle="modal" data-dismiss="modal">Autres jeux</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
+            <button type="button" class="btn btn-primary gameClosed" data-target="#ModalGame" data-toggle="modal" data-dismiss="modal" onclick="gameClosed()">Autres jeux</button>
+            <button type="button" class="btn btn-secondary gameClosed" data-dismiss="modal" onclick="gameClosed()">Quitter</button>
           </div>
         </div>
       </div>
@@ -384,6 +385,10 @@
 
     <!-- Custom scripts -->
     <script src="assets/js/script.js"></script>
+
+    <!-- Custom scripts game -->
+    <script src="js/morpion.js"></script>
+
 
   </body>
 
