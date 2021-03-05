@@ -1,5 +1,7 @@
 // Morpion
 const statut = document.querySelector(".statut")
+const grille = document.getElementById('morpionGrille')
+const buttons = document.getElementsByClassName('selectPlayerButton')
 let gameOn = false
 var playerOn = ""
 
@@ -20,18 +22,24 @@ let gameState = ["","","","","","","","",""]
 const win = () => `Le joueur ${playerOn} a gagné`
 const draw = () =>"Égalité"
 const playerTurn = () => `C'est au tour du joueur ${playerOn}`
+const choice = () => "Veuillez choisir une lettre"
 
-document.querySelector('#titleMorpion').addEventListener("click", gameStart)
+document.querySelectorAll('.selectPlayerButton').forEach(clicButton=> clicButton.addEventListener("click", gameStart))
 document.querySelectorAll(".case").forEach(cell=> cell.addEventListener("click", gestionCase))
 document.querySelector(".resetGame").addEventListener("click", gameReset)
-
+statut.innerHTML = choice()
 
 function gameStart(){
+    console.log(playerOn = this.value)
     while(playerOn !== "X" || playerOn !=="O"){
-        playerOn = prompt('Vous voulez les "X" ou les "O" ? Entrez le caractère correspondant en majuscule.')
+        playerOn = this.value
         if(playerOn == "X" || playerOn == "O"){
             statut.innerHTML = playerTurn()
             gameOn = true
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].style.display = "none";
+              }
+            grille.style.display = "grid"
             return playerOn, gameOn
         }
     }
@@ -80,15 +88,22 @@ function checkWin(){
     statut.innerHTML = playerTurn()
 }
 function gameReset(){
-    statut.innerHTML = ""
+    statut.innerHTML = choice()
     gameState = ["","","","","","","","",""]
     document.querySelectorAll(".case").forEach(cell=> cell.innerHTML = "")
-    gameStart()
+    grille.style.display = "none"
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.display = "";
+    }
 }
 function gameClosed(){
-    statut.innerHTML = ""
+    statut.innerHTML = choice()
     gameState = ["","","","","","","","",""]
     document.querySelectorAll(".case").forEach(cell=> cell.innerHTML = "")
     playerOn = ""
     gameOn = false
+    grille.style.display = "none"
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].style.display = "";
+    }
 }

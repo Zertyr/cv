@@ -271,12 +271,20 @@ p.game:hover {
 /* Grille morpion */
 
 #morpionGrille {
-  display:grid;
+  display:none;
   grid-template-columns: repeat(3, 1fr);
   width: 300px;
   margin:auto;
 }
 
+.selectPlayer{
+  margin: auto;
+  text-align: center;
+}
+
+.selectPlayerButton{
+  width: 25%;
+}
 .case {
   border: #343a40 solid 2px;
   height: 100px !important;
