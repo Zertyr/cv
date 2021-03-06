@@ -247,7 +247,7 @@ a:hover, a:focus, a:active {
   color: #824027;
 }
 
-/* jsGame */
+/* Morpion START */
 .modal {
   top: 0% !important;
 }
@@ -302,3 +302,60 @@ p.game:hover {
   font-size: 25px !important;
   padding-top: 10px !important;
 }
+
+/* Morpion END */
+
+/* Jankenpon START */
+.selectJakenpon{
+  text-align: center;
+}
+.btnJakenpon{
+  margin: auto;
+
+}
+.nameJankenpon{
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 30px;
+  color: black;
+  display: none;
+
+}
+
+.selectActionJankenpon {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 10px;
+}
+
+.JankenponPlayer {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 10px;
+  border: #006fdd 5px solid;
+  display: none;
+}
+
+.JankenponIA {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 10px;
+  border: #006fdd 5px solid;
+  display: none;
+}
+
+.versus {
+  width: 150px !important;
+  height: 150px !important;
+  display: none;
+}
+
+.statutJankenpon {
+  color: #252627 !important;
+  text-align: center !important;
+  font-size: 25px !important;
+  padding-top: 10px !important;
+}
+
+/* Jankenpon END */

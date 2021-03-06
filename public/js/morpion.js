@@ -26,7 +26,7 @@ const choice = () => "Veuillez choisir une lettre"
 
 document.querySelectorAll('.selectPlayerButton').forEach(clicButton=> clicButton.addEventListener("click", gameStart))
 document.querySelectorAll(".case").forEach(cell=> cell.addEventListener("click", gestionCase))
-document.querySelector(".resetGame").addEventListener("click", gameReset)
+document.querySelector(".resetGame").addEventListener("click", MorpionReset)
 statut.innerHTML = choice()
 
 function gameStart(){
@@ -87,7 +87,7 @@ function checkWin(){
     playerOn = playerOn === "X" ? "O" : "X"
     statut.innerHTML = playerTurn()
 }
-function gameReset(){
+function MorpionReset(){
     statut.innerHTML = choice()
     gameState = ["","","","","","","","",""]
     document.querySelectorAll(".case").forEach(cell=> cell.innerHTML = "")
@@ -96,7 +96,7 @@ function gameReset(){
         buttons[i].style.display = "";
     }
 }
-function gameClosed(){
+function MorpionClosed(){
     statut.innerHTML = choice()
     gameState = ["","","","","","","","",""]
     document.querySelectorAll(".case").forEach(cell=> cell.innerHTML = "")

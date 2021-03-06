@@ -345,6 +345,7 @@
           </div>
           <div class="modal-body">
             <a data-target="#MorpionGame" data-toggle="modal" data-dismiss="modal"><p class="game" id="titleMorpion">Morpion(JcJ)</p></a>
+            <a data-target="#JankenponGame" data-toggle="modal" data-dismiss="modal"><p class="game" id="titleJankenpon">Pierre, papier, ciseaux</p></a>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
@@ -360,13 +361,13 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Jeux en js : </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="gameClosed()">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="MorpionClosed()">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <h2 class="titleGame">Morpion(JcJ)</h2>
-            <div class="selectPlayer"><button class="btn btn-primary selectPlayerButton" value="X">X</button> <button class="btn btn-primary selectPlayerButton" value="O">O</button></div>
+            <div class="selectPlayer"><button class="btn btn-primary selectPlayerButton hvr-float-shadow" value="X">X</button> <button class="btn btn-primary selectPlayerButton hvr-float-shadow" value="O">O</button></div>
             <section id="morpionGrille">
               <div data-index="0" class="case"></div>
               <div data-index="1" class="case"></div>
@@ -383,13 +384,69 @@
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary gameClosed" data-target="#ModalGame" data-toggle="modal" data-dismiss="modal" onclick="gameClosed()">Autres jeux</button>
-            <button type="button" class="btn btn-secondary gameClosed" data-dismiss="modal" onclick="gameClosed()">Quitter</button>
+            <button type="button" class="btn btn-primary gameClosed" data-target="#ModalGame" data-toggle="modal" data-dismiss="modal" onclick="MorpionClosed()">Autres jeux</button>
+            <button type="button" class="btn btn-secondary gameClosed" data-dismiss="modal" onclick="MorpionClosed()">Quitter</button>
           </div>
         </div>
       </div>
     </div>
     <!-- MORPION END -->
+
+    <!-- Jakenpo START -->
+    <div class="modal" tabindex="-1" role="dialog" id="JankenponGame">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Jeux en js : </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="jankenponClosed()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h2 class="titleGame">Pierre, Papier, Ciseaux</h2>
+            <div class="row">
+              <div class="col-sm nameJankenpon">
+                Joueur :
+              </div>
+              <div class="col-sm">
+              </div>
+              <div class="col-sm nameJankenpon">
+                IA :
+              </div>
+            </div>
+
+            <div class="selectJakenpon">
+              <button class="btn btn-primary btnJankenpon hvr-float-shadow" value="pierre">
+                <img src="assets/img/pierre.jpg" class="selectActionJankenpon" alt="">
+              </button> 
+              <button class="btn btn-primary btnJankenpon hvr-float-shadow" value="feuille">
+                <img src="assets/img/feuille.png" class="selectActionJankenpon" alt="">
+              </button>
+              <button class="btn btn-primary btnJankenpon hvr-float-shadow" value="ciseaux">
+                <img src="assets/img/ciseaux.jpg" class="selectActionJankenpon" alt="">
+              </button>
+            </div>
+            <section id="Jankenpon">
+              <img src="assets/img/pierre.jpg" class="JankenponPlayer" value="pierre" alt="">
+              <img src="assets/img/feuille.png" class="JankenponPlayer" value="feuille" alt="">
+              <img src="assets/img/ciseaux.jpg" class="JankenponPlayer" value="ciseaux" alt="">
+              <img src="assets/img/Vs.png" class="versus" id="versus" value="vs" alt="">
+              <img src="assets/img/pierre.jpg" class="JankenponIA" value="pierre" alt="">
+              <img src="assets/img/feuille.png" class="JankenponIA" value="feuille" alt="">
+              <img src="assets/img/ciseaux.jpg" class="JankenponIA" value="ciseaux" alt="">
+            </section>
+            <p class="statutJankenpon"></p>
+          <button type="button" class="btn btn-secondary resetGame resetJankenpon">Recommencer</button>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary gameClosed" data-target="#ModalGame" data-toggle="modal" data-dismiss="modal" onclick="jankenponClosed()">Autres jeux</button>
+            <button type="button" class="btn btn-secondary gameClosed" data-dismiss="modal" onclick="jankenponClosed()">Quitter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jakenpo END -->
 
     <!--start of modal for portfolio work in progress -->
     <div class="modal" tabindex="-1" role="dialog" id="WIK">
@@ -425,6 +482,7 @@
 
     <!-- Custom scripts game -->
     <script src="js/morpion.js"></script>
+    <script src="js/jankenpon.js"></script>
 
 
   </body>
