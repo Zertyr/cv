@@ -247,6 +247,9 @@ a:hover, a:focus, a:active {
   color: #824027;
 }
 
+.siteCV:hover {
+  cursor: not-allowed;
+}
 /* Morpion START */
 .modal {
   top: 0% !important;
