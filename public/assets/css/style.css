@@ -362,3 +362,15 @@ p.game:hover {
 }
 
 /* Jankenpon END */
+
+#SnakeGame {
+  text-align: center;
+}
+
+.resetSnake {
+  display: none;
+}
+.score {
+  font-weight: bold;
+  font-size: x-large;
+}

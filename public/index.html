@@ -359,6 +359,7 @@
           <div class="modal-body">
             <a data-target="#MorpionGame" data-toggle="modal" data-dismiss="modal"><p class="game" id="titleMorpion">Morpion(JcJ)</p></a>
             <a data-target="#JankenponGame" data-toggle="modal" data-dismiss="modal"><p class="game" id="titleJankenpon">Pierre, papier, ciseaux</p></a>
+            <a data-target="#SnakeGame" data-toggle="modal" data-dismiss="modal"><p class="game" id="titleSnake">Snake (tuto canvas)</p></a>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Quitter</button>
@@ -466,7 +467,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title">Informations</h2>
+            <h2 class="modal-title">Pas en ligne</h2>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -482,7 +483,31 @@
     </div>
     <!--enf of modal for portfolio work in progress -->
 
-
+    <!--start of modal for portfolio Snake -->
+    <div class="modal" tabindex="-1" role="dialog" id="SnakeGame">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" onclick=" main()">Snake</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="resetSnake()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <button class="btn btn-primary startSnake" id="startSnake">start</button>
+            <button class="btn btn-secondary resetSnake" id="startSnake">Reset</button>
+            <br>
+            <br>
+            <p class="score">score : <span id="score">0</span></p>
+            <canvas id = "SnakeCanvas" width = "400" height = "500">  </canvas>
+         </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="resetSnake()">Quitter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--enf of modal for portfolio work in progress -->
     <!-- Bootstrap core JavaScript -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -496,7 +521,7 @@
     <!-- Custom scripts game -->
     <script src="js/morpion.js"></script>
     <script src="js/jankenpon.js"></script>
-
+    <script src="js/snake.js"></script>
 
   </body>
 
