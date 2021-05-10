@@ -220,13 +220,24 @@ text-align: inherit;
   }
 }
 
+/* logo
+/*
+@media (max-width:600) {
+  .floating-left {
+    align-content: center;
+  }
+
+} */
 @media (min-width: 992px) {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
 }
-
+/* logo
+/* .floating-left {
+  float: left;
+} */
 .bg-primary {
   background-color: dodgerblue !important;
 }
@@ -374,3 +385,4 @@ p.game:hover {
   font-weight: bold;
   font-size: x-large;
 }
+
